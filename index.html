@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shyaam's Certifications</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #333;
+    }
+    body.dark {
+      --bg-color: #1e1e1e;
+      --text-color: #f1f1f1;
+    }
+    h1 { text-align: center; }
+    .search-container { text-align: center; margin: 20px; }
+    .search-container input {
+      width: 50%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .toggle-dark {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: #444;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .cert-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .cert { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); width: 300px; text-align: center; transition: transform 0.2s; }
+    .cert:hover { transform: scale(1.02); }
+    .cert img { width: 100%; border-radius: 8px; }
+    .cert-title { margin-top: 10px; font-weight: bold; font-size: 16px; }
+    .cert-link { margin-top: 5px; display: block; color: #2563eb; text-decoration: none; }
+    .category { font-size: 14px; color: gray; margin-top: 4px; }
+    .dark .cert { background: #2e2e2e; }
+  </style>
+</head>
+<body>
+  <button class="toggle-dark" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <h1>Shyaam's Certifications</h1>
+  <div class="search-container">
+    <input type="text" id="searchInput" onkeyup="searchCerts()" placeholder="Search certifications...">
+  </div>
+  <div class="cert-grid" id="certGrid">
+
+    <div class="cert" data-title="aws certified solutions architect - associate certificate.pdf">
+      <a href="certs/AWS Certified Solutions Architect - Associate certificate.pdf" target="_blank">
+        <img src="images/AWS Certified Solutions Architect - Associate certificate.jpg" alt="AWS Certified Solutions Architect - Associate certificate.pdf">
+      </a>
+      <div class="cert-title">AWS Certified Solutions Architect - Associate certificate</div>
+      <div class="category">AWS</div>
+      <a class="cert-link" href="certs/AWS Certified Solutions Architect - Associate certificate.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="benifits_101.pdf">
+      <a href="certs/Benifits_101.pdf" target="_blank">
+        <img src="images/Benifits_101.jpg" alt="Benifits_101.pdf">
+      </a>
+      <div class="cert-title">Benifits_101</div>
+      <div class="category">General</div>
+      <a class="cert-link" href="certs/Benifits_101.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="certificateofcompletion_getting started with google cloud.pdf">
+      <a href="certs/CertificateOfCompletion_Getting Started with Google Cloud.pdf" target="_blank">
+        <img src="images/CertificateOfCompletion_Getting Started with Google Cloud.jpg" alt="CertificateOfCompletion_Getting Started with Google Cloud.pdf">
+      </a>
+      <div class="cert-title">CertificateOfCompletion_Getting Started with Google Cloud</div>
+      <div class="category">Google</div>
+      <a class="cert-link" href="certs/CertificateOfCompletion_Getting Started with Google Cloud.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="certificateofcompletion_google cloud data and storage foundations.pdf">
+      <a href="certs/CertificateOfCompletion_Google Cloud Data and Storage Foundations.pdf" target="_blank">
+        <img src="images/CertificateOfCompletion_Google Cloud Data and Storage Foundations.jpg" alt="CertificateOfCompletion_Google Cloud Data and Storage Foundations.pdf">
+      </a>
+      <div class="cert-title">CertificateOfCompletion_Google Cloud Data and Storage Foundations</div>
+      <div class="category">Google</div>
+      <a class="cert-link" href="certs/CertificateOfCompletion_Google Cloud Data and Storage Foundations.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="certificateofcompletion_google cloud foundations.pdf">
+      <a href="certs/CertificateOfCompletion_Google Cloud Foundations.pdf" target="_blank">
+        <img src="images/CertificateOfCompletion_Google Cloud Foundations.jpg" alt="CertificateOfCompletion_Google Cloud Foundations.pdf">
+      </a>
+      <div class="cert-title">CertificateOfCompletion_Google Cloud Foundations</div>
+      <div class="category">Google</div>
+      <a class="cert-link" href="certs/CertificateOfCompletion_Google Cloud Foundations.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="certificateofcompletion_google cloud security for beginners tools and services (1).pdf">
+      <a href="certs/CertificateOfCompletion_Google Cloud Security for Beginners Tools and Services (1).pdf" target="_blank">
+        <img src="images/CertificateOfCompletion_Google Cloud Security for Beginners Tools and Services (1).jpg" alt="CertificateOfCompletion_Google Cloud Security for Beginners Tools and Services (1).pdf">
+      </a>
+      <div class="cert-title">CertificateOfCompletion_Google Cloud Security for Beginners Tools and Services (1)</div>
+      <div class="category">Google</div>
+      <a class="cert-link" href="certs/CertificateOfCompletion_Google Cloud Security for Beginners Tools and Services (1).pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="certificateofcompletion_google cloud security for beginners tools and services.pdf">
+      <a href="certs/CertificateOfCompletion_Google Cloud Security for Beginners Tools and Services.pdf" target="_blank">
+        <img src="images/CertificateOfCompletion_Google Cloud Security for Beginners Tools and Services.jpg" alt="CertificateOfCompletion_Google Cloud Security for Beginners Tools and Services.pdf">
+      </a>
+      <div class="cert-title">CertificateOfCompletion_Google Cloud Security for Beginners Tools and Services</div>
+      <div class="category">Google</div>
+      <a class="cert-link" href="certs/CertificateOfCompletion_Google Cloud Security for Beginners Tools and Services.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="certificateofcompletion_google sites essential training.pdf">
+      <a href="certs/CertificateOfCompletion_Google Sites Essential Training.pdf" target="_blank">
+        <img src="images/CertificateOfCompletion_Google Sites Essential Training.jpg" alt="CertificateOfCompletion_Google Sites Essential Training.pdf">
+      </a>
+      <div class="cert-title">CertificateOfCompletion_Google Sites Essential Training</div>
+      <div class="category">Google</div>
+      <a class="cert-link" href="certs/CertificateOfCompletion_Google Sites Essential Training.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="certificateofcompletion_public speaking skills professional certificate by toastmasters international.pdf">
+      <a href="certs/CertificateOfCompletion_Public Speaking Skills Professional Certificate by Toastmasters International.pdf" target="_blank">
+        <img src="images/CertificateOfCompletion_Public Speaking Skills Professional Certificate by Toastmasters International.jpg" alt="CertificateOfCompletion_Public Speaking Skills Professional Certificate by Toastmasters International.pdf">
+      </a>
+      <div class="cert-title">CertificateOfCompletion_Public Speaking Skills Professional Certificate by Toastmasters International</div>
+      <div class="category">Communication</div>
+      <a class="cert-link" href="certs/CertificateOfCompletion_Public Speaking Skills Professional Certificate by Toastmasters International.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="cogs_fsu.pdf">
+      <a href="certs/COGS_FSU.pdf" target="_blank">
+        <img src="images/COGS_FSU.jpg" alt="COGS_FSU.pdf">
+      </a>
+      <div class="cert-title">COGS_FSU</div>
+      <div class="category">General</div>
+      <a class="cert-link" href="certs/COGS_FSU.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="dms_cybersecurity_training.pdf">
+      <a href="certs/DMS_Cybersecurity_Training.pdf" target="_blank">
+        <img src="images/DMS_Cybersecurity_Training.jpg" alt="DMS_Cybersecurity_Training.pdf">
+      </a>
+      <div class="cert-title">DMS_Cybersecurity_Training</div>
+      <div class="category">DMS</div>
+      <a class="cert-link" href="certs/DMS_Cybersecurity_Training.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="dms_hatch_act.pdf">
+      <a href="certs/DMS_Hatch_Act.pdf" target="_blank">
+        <img src="images/DMS_Hatch_Act.jpg" alt="DMS_Hatch_Act.pdf">
+      </a>
+      <div class="cert-title">DMS_Hatch_Act</div>
+      <div class="category">DMS</div>
+      <a class="cert-link" href="certs/DMS_Hatch_Act.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="dms_telework_program_policy.pdf">
+      <a href="certs/DMS_Telework_Program_Policy.pdf" target="_blank">
+        <img src="images/DMS_Telework_Program_Policy.jpg" alt="DMS_Telework_Program_Policy.pdf">
+      </a>
+      <div class="cert-title">DMS_Telework_Program_Policy</div>
+      <div class="category">DMS</div>
+      <a class="cert-link" href="certs/DMS_Telework_Program_Policy.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="email_excellence_for_the_divtel.pdf">
+      <a href="certs/Email_Excellence_for_the_DivTEL.pdf" target="_blank">
+        <img src="images/Email_Excellence_for_the_DivTEL.jpg" alt="Email_Excellence_for_the_DivTEL.pdf">
+      </a>
+      <div class="cert-title">Email_Excellence_for_the_DivTEL</div>
+      <div class="category">General</div>
+      <a class="cert-link" href="certs/Email_Excellence_for_the_DivTEL.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="ethereum_defi_smart_contract.pdf">
+      <a href="certs/Ethereum_DeFi_Smart_Contract.pdf" target="_blank">
+        <img src="images/Ethereum_DeFi_Smart_Contract.jpg" alt="Ethereum_DeFi_Smart_Contract.pdf">
+      </a>
+      <div class="cert-title">Ethereum_DeFi_Smart_Contract</div>
+      <div class="category">Blockchain</div>
+      <a class="cert-link" href="certs/Ethereum_DeFi_Smart_Contract.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="ethics_for_procurement_and_contract_management.pdf">
+      <a href="certs/Ethics_for_Procurement_and_Contract_Management.pdf" target="_blank">
+        <img src="images/Ethics_for_Procurement_and_Contract_Management.jpg" alt="Ethics_for_Procurement_and_Contract_Management.pdf">
+      </a>
+      <div class="cert-title">Ethics_for_Procurement_and_Contract_Management</div>
+      <div class="category">General</div>
+      <a class="cert-link" href="certs/Ethics_for_Procurement_and_Contract_Management.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="flair_to_florida_palm.pdf">
+      <a href="certs/FLAIR_to_Florida_PALM.pdf" target="_blank">
+        <img src="images/FLAIR_to_Florida_PALM.jpg" alt="FLAIR_to_Florida_PALM.pdf">
+      </a>
+      <div class="cert-title">FLAIR_to_Florida_PALM</div>
+      <div class="category">DMS</div>
+      <a class="cert-link" href="certs/FLAIR_to_Florida_PALM.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="florida_palm_training_highlights-navigation.pdf">
+      <a href="certs/Florida_PALM_Training_Highlights-Navigation.pdf" target="_blank">
+        <img src="images/Florida_PALM_Training_Highlights-Navigation.jpg" alt="Florida_PALM_Training_Highlights-Navigation.pdf">
+      </a>
+      <div class="cert-title">Florida_PALM_Training_Highlights-Navigation</div>
+      <div class="category">DMS</div>
+      <a class="cert-link" href="certs/Florida_PALM_Training_Highlights-Navigation.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="global_partner_certificate_fsu.pdf">
+      <a href="certs/Global_Partner_Certificate_FSU.pdf" target="_blank">
+        <img src="images/Global_Partner_Certificate_FSU.jpg" alt="Global_Partner_Certificate_FSU.pdf">
+      </a>
+      <div class="cert-title">Global_Partner_Certificate_FSU</div>
+      <div class="category">General</div>
+      <a class="cert-link" href="certs/Global_Partner_Certificate_FSU.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="google it support.pdf">
+      <a href="certs/Google IT support.pdf" target="_blank">
+        <img src="images/Google IT support.jpg" alt="Google IT support.pdf">
+      </a>
+      <div class="cert-title">Google IT support</div>
+      <div class="category">Google</div>
+      <a class="cert-link" href="certs/Google IT support.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="preventing_sexual_harassment.pdf">
+      <a href="certs/Preventing_Sexual_Harassment.pdf" target="_blank">
+        <img src="images/Preventing_Sexual_Harassment.jpg" alt="Preventing_Sexual_Harassment.pdf">
+      </a>
+      <div class="cert-title">Preventing_Sexual_Harassment</div>
+      <div class="category">General</div>
+      <a class="cert-link" href="certs/Preventing_Sexual_Harassment.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="public_records_and_employee_ethics.pdf">
+      <a href="certs/Public_Records_and_Employee_Ethics.pdf" target="_blank">
+        <img src="images/Public_Records_and_Employee_Ethics.jpg" alt="Public_Records_and_Employee_Ethics.pdf">
+      </a>
+      <div class="cert-title">Public_Records_and_Employee_Ethics</div>
+      <div class="category">General</div>
+      <a class="cert-link" href="certs/Public_Records_and_Employee_Ethics.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="statewide-advancing_accountability.pdf">
+      <a href="certs/Statewide-Advancing_Accountability.pdf" target="_blank">
+        <img src="images/Statewide-Advancing_Accountability.jpg" alt="Statewide-Advancing_Accountability.pdf">
+      </a>
+      <div class="cert-title">Statewide-Advancing_Accountability</div>
+      <div class="category">DMS</div>
+      <a class="cert-link" href="certs/Statewide-Advancing_Accountability.pdf" target="_blank">View PDF</a>
+    </div>
+    
+    <div class="cert" data-title="statewid-florida_single_audit_act_online_training.pdf">
+      <a href="certs/Statewid-Florida_Single_Audit_Act_Online_Training.pdf" target="_blank">
+        <img src="images/Statewid-Florida_Single_Audit_Act_Online_Training.jpg" alt="Statewid-Florida_Single_Audit_Act_Online_Training.pdf">
+      </a>
+      <div class="cert-title">Statewid-Florida_Single_Audit_Act_Online_Training</div>
+      <div class="category">DMS</div>
+      <a class="cert-link" href="certs/Statewid-Florida_Single_Audit_Act_Online_Training.pdf" target="_blank">View PDF</a>
+    </div>
+    
+  </div>
+  <script>
+    function searchCerts() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const certs = document.querySelectorAll('.cert');
+      certs.forEach(cert => {
+        const title = cert.getAttribute('data-title');
+        cert.style.display = title.includes(input) ? 'block' : 'none';
+      });
+    }
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
